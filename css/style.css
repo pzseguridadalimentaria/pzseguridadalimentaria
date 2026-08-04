@@ -1,0 +1,95 @@
+:root {
+    --primary: #1a4a7c;    /* Azul profesional */
+    --secondary: #2c7da0;  /* Azul confianza */
+    --accent: #f8f9fa;
+    --dark: #121212;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo Hero */
+.hero-section {
+    height: 85vh;
+    background: linear-gradient(rgba(10, 30, 60, 0.75), rgba(10, 30, 60, 0.75)), 
+                url('https://images.unsplash.com/photo-1565061828048-29415f21ad5c?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+.nav-link {
+    font-weight: 500;
+    color: var(--dark) !important;
+}
+
+.nav-link:hover {
+    color: var(--secondary) !important;
+}
+
+/* Colores generales */
+.text-primary { color: var(--primary) !important; }
+.btn-primary { background-color: var(--primary); border-color: var(--primary); }
+.btn-primary:hover { background-color: var(--secondary); border-color: var(--secondary); }
+
+/* Secciones */
+.section-title {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    bottom: 0;
+    left: 0;
+}
+
+.text-center .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Tarjetas de Servicio */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.service-card i {
+    opacity: 0.8;
+}
+
+/* Listas de Capacitación */
+.list-group-item {
+    border: none;
+    padding-left: 0;
+}
+
+/* Footer & Contacto */
+#contacto a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive fixes para textos largos */
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 2rem; }
+    .hero-section p { font-size: 1rem; }
+}
